@@ -1,0 +1,25 @@
+apiVersion: carto.run/v1alpha1
+kind: Deliverable
+metadata:
+  creationTimestamp: "2022-04-21T04:44:21Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/component: deliverable
+    app.kubernetes.io/part-of: petclinic-server
+    app.tanzu.vmware.com/deliverable-type: web
+    apps.kubernetes.io/name: spring-petclinic
+    apps.tanzu.vmware.com/has-tests: "true"
+    apps.tanzu.vmware.com/workload-type: web
+    carto.run/cluster-template-name: deliverable-template
+    carto.run/resource-name: deliverable
+    carto.run/supply-chain-name: source-test-to-url
+    carto.run/template-kind: ClusterTemplate
+    carto.run/workload-name: spring-petclinic-03
+    carto.run/workload-namespace: tap-install
+  name: spring-petclinic-03
+  namespace: tap-install
+  resourceVersion: "3015780"
+  uid: 2bc1b829-9325-41ea-89c0-97d720ab8575
+spec:
+  source:
+    image: tapbsy.azurecr.io/tapbsy/supply-chains/spring-petclinic-03-tap-install-bundle:01843a00-7378-4089-939b-b331495b0e81
