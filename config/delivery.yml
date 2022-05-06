@@ -46,7 +46,7 @@ spec:
           value: |-
             -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=9005
              -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details=always -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include=* -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s" -Dspring.devtools.restart.enabled="true" -Dspring.devtools.restart.poll-interval="2s" -Dspring.devtools.restart.quiet-period="1s"
-        image: tapbsy.azurecr.io/tapbsy/supply-chains/spring-petclinic-gitops-03-tap-install@sha256:70a88e59706b1b68b6328ab7b18d3c93f540ed878385904f5c7d2923e31eca76
+        image: tapbsy.azurecr.io/tapbsy/supply-chains/spring-petclinic-gitops-03-tap-install@sha256:b845dd38708babea0dc4f6fce7a1f3e93e93c141fb01e8afcc7ce3c8bc8d107f
         name: workload
         ports:
         - containerPort: 8080
