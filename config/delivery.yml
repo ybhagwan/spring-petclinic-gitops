@@ -1,13 +1,13 @@
 apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
-  name: spring-petclinic-gitops-new-ssh
+  name: spring-petclinic-gitops-5
   labels:
     app.kubernetes.io/part-of: petclinic-server
     apps.kubernetes.io/name: spring-petclinic
     apps.tanzu.vmware.com/workload-type: web
     app.kubernetes.io/component: run
-    carto.run/workload-name: spring-petclinic-gitops-new-ssh
+    carto.run/workload-name: spring-petclinic-gitops-5
 spec:
   template:
     metadata:
@@ -30,7 +30,7 @@ spec:
         app.kubernetes.io/part-of: petclinic-server
         apps.kubernetes.io/name: spring-petclinic
         apps.tanzu.vmware.com/workload-type: web
-        carto.run/workload-name: spring-petclinic-gitops-new-ssh
+        carto.run/workload-name: spring-petclinic-gitops-5
         conventions.apps.tanzu.vmware.com/framework: spring-boot
         services.conventions.apps.tanzu.vmware.com/mysql: workload
         tanzu.app.live.view: "true"
@@ -46,7 +46,7 @@ spec:
           value: |-
             -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=9005
              -Dmanagement.endpoint.health.probes.add-additional-paths="true" -Dmanagement.endpoint.health.show-details=always -Dmanagement.endpoints.web.base-path="/actuator" -Dmanagement.endpoints.web.exposure.include=* -Dmanagement.health.probes.enabled="true" -Dmanagement.server.port="8081" -Dserver.port="8080" -Dserver.shutdown.grace-period="24s" -Dspring.devtools.restart.enabled="true" -Dspring.devtools.restart.poll-interval="2s" -Dspring.devtools.restart.quiet-period="1s"
-        image: tapbsy.azurecr.io/tapbsy/supply-chains/spring-petclinic-gitops-new-ssh-tap-install@sha256:4bae61ca8353bc884ca026f6d916fb78df78c77f45f442e3b6ac46c4a53afd5d
+        image: tapbsy.azurecr.io/tapbsy/supply-chains/spring-petclinic-gitops-5-tap-install@sha256:cb2d816a74d20b773160a3c509da2e0f2954305fd0abac8c37142a9dc24fa151
         name: workload
         ports:
         - containerPort: 8080
